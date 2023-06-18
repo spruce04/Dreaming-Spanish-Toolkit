@@ -17,7 +17,6 @@ function monthlyOverview() {
 
     //Find the daily average - note that this will include days that haven't yet passed
     let average = watched / (allDays.length);
-    console.log(average)
     let avgHours = parseInt(average/60);
     let avgMins = (average - 60 * avgHours).toFixed(1);
     
