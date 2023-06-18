@@ -20,6 +20,6 @@ function monthlyOverview() {
     let avgHours = parseInt(average/60);
     let avgMins = (average - 60 * avgHours).toFixed(1);
     
-    return `Total watched this month: ${hourCount} hours and ${minuteCount} minutes. \nAverage time each day: ${avgHours} hour(s) and ${avgMins} minutes`;
+    return `Total watched this month: ${hourCount} hours and ${minuteCount} minutes. \nAverage time each day: ${avgHours} hour(s) and ${avgMins} minutes.`;
 }
 console.log(monthlyOverview());
