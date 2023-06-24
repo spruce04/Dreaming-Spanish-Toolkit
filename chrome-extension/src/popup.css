@@ -1,0 +1,27 @@
+body {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ #header {
+     color: orange;
+     font-size: 20px;
+     font-weight: 600;
+ }
+ 
+ #monthlyStats {
+     margin-top: 10px;
+     display: flex;
+     padding-top: 5px; 
+     padding-bottom: 5px; 
+     background-color: white;
+     border: 1px solid orange;
+ }    
+ 
+ #monthlyStats:hover {
+     background-color: orange;
+     cursor: pointer;
+ }

@@ -1,13 +1,10 @@
 //not currently working / work in progress
 
 document.addEventListener('DOMContentLoaded', function () {
-    const updatable = document.getElementById("updatable");
-    const monthlyStats = document.getElementById("monthlyStats")
-    monthlyStats.addEventListener("click", updateDisplay(updatable, monthlyStats))
+    const updatable = document.getElementById("updatableMonthlyStats");
 })
 
-//for some reason the button clicks automatically when you open the extension - fix later
-let clicked = false
+
 
 //code to get monthly total and daily average for a month
 function monthlyStats() {
@@ -46,31 +43,3 @@ function monthlyStats() {
     }
     
 }
-
-//code to update the display in the extension
-function updateDisplay(updatable, text) {
-   //for some reason the button clicks automatically when you open the extension - fix later
-   if (clicked === false) {
-    clicked = true;
-    return;
-}
-    console.log('UD')
-    console.log(text)
-    updatable.textContent = text;
-}
-
-//get the url of the current tab - copied code, not sure how it works
-function getCurrentTabUrl() {  
-    console.log('entered')
-    var queryInfo = {  
-      active: true,  
-      currentWindow: true  
-    };    
-    chrome.tabs.query(queryInfo, (tabs) => {  
-      var tab = tabs[0];  
-      var url = tab.url;  
-      alert(url)
-      return url;
-    });  
-    
-}  
