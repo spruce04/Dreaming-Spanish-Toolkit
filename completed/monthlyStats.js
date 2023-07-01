@@ -2,7 +2,7 @@
 function monthlyOverview() {
     //gather all the days
     let daysLogged = document.getElementsByClassName("ds-form-calendar__column-time");
-    let allDays = document.getElementsByClassName("ds-form-calendar__column--day-number")
+    let allDays = document.getElementsByClassName("ds-form-calendar__column--day-number");
 
     //loop through all the days and sum the total amount of time
     let watched = 0;
@@ -20,6 +20,6 @@ function monthlyOverview() {
     let avgHours = parseInt(average/60);
     let avgMins = (average - 60 * avgHours).toFixed(1);
     
-    return `Total watched this month: ${hourCount} hours and ${minuteCount} minutes. \nAverage time each day: ${avgHours} hour(s) and ${avgMins} minutes.`;
+    return `Total watched this month: ${hourCount} hour(s) and ${minuteCount} minute(s). \nAverage time each day: ${avgHours} hour(s) and ${avgMins} minute(s).`;
 }
 console.log(monthlyOverview());

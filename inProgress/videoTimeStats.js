@@ -1,6 +1,2 @@
-const allVids = document.getElementsByClassName("ds-badge ds-badge--sm ds-badge--gray-80 ds-video-thumbnail__badge ds-video-thumbnail__badge--duration");
-let body = document.getElementsByTagName("body");
-body.style = ""
-console.log(allVids.length);
-console.log(allVids[0].textContent);
-window.scrollBy(0, 1000);
+//to be done
+//Gives the combined length of all videos depending on whatever filters are used (not sure if this would be possible with the website as it is - if you try it you'll see what I mean)
