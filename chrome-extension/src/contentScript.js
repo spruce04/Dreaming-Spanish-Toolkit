@@ -1,9 +1,9 @@
 chrome.runtime.onMessage.addListener(
-    function(request, message, sendResponse) {
-        if(request.message == "get monthly stats") {
-            console.log('did the thing')
-            sendResponse({ response: 'content script response'});
-
-        }
+    function(request, sender, sendResponse) {
+      console.log(sender.tab ?
+                  "from a content script:" + sender.tab.url :
+                  "from the extension");
+      if (request.greeting === "hello")
+        sendResponse({farewell: "goodbye"});
     }
-)
+  );

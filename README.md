@@ -12,4 +12,5 @@
     * [Chrome Extension](https://github.com/spruce04/Dreaming-Spanish-Toolkit/tree/main/chrome-extension) &rarr; A chrome extension that can have the functionalities of all the current finished scripts for easy use
     
 ## Possible Future Ideas
-* dark mode?
+* Dark Mode
+* Hide Videos that you don't want to watch

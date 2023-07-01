@@ -8,7 +8,7 @@ body {
  
  #header {
      color: orange;
-     font-size: 20px;
+     font-size: 22px;
      font-weight: 600;
  }
  
@@ -19,9 +19,12 @@ body {
      padding-bottom: 5px; 
      background-color: white;
      border: 1px solid orange;
+     border-radius: 5px;
+     font-size: 15px;
  }    
  
  #monthlyStats:hover {
      background-color: orange;
+     font-size: 16px;
      cursor: pointer;
  }
