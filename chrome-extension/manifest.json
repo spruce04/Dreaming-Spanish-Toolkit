@@ -31,7 +31,8 @@
     },
     "options_page": "./src/options.html",
     "permissions": [
-        "tabs"
+        "tabs",
+        "storage"
     ],
     "host_permissions": [
         "https://www.dreamingspanish.com/*"

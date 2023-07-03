@@ -6,6 +6,11 @@ body {
    align-items: center;
 }
 
+.darkMode {
+    background-color: black;
+    color: white;
+}
+
 #header {
     color: orange;
     font-size: 22px;
@@ -39,6 +44,51 @@ body {
     text-align: center;
     margin-top: 10px;
     padding: 2px;
+}
+
+#clearMonthlyStats {
+    margin-top: 5px;
+    padding-top: 2px; 
+    padding-bottom: 2px; 
+    background-color: white;
+    border: 1px solid orange;
+    border-radius: 3px;
+    font-size: 10px;
+}    
+ 
+#clearMonthlyStats:hover {
+    background-color: orange;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#clearMonthlyStats:active {
+    background-color: darkorange;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#toggleDarkMode {
+    margin-top: 10px;
+    display: flex;
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+#toggleDarkMode:hover {
+    background-color: gray;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#toggleDarkMode:active {
+    background-color: darkgray;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 #footer {
