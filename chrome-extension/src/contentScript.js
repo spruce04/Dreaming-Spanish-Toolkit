@@ -1,8 +1,24 @@
+//when the window reloads
+window.addEventListener("load", (event) => {
+  console.log('reload content');
+  send({reload: 'reload'});
+});
+
 //listen for messages from other parts of the extension
 chrome.runtime.onMessage.addListener(
   function(message, sender, sendResponse) {
     if (message.content === "get monthly stats") { //if we are told to get monthly stats
       send({monthlyStats : monthlyOverview()}); //get them and send them to background.js
+    }
+    else if ('display' in message) {//change between light and dark mode
+      if(message.display == "dark") {
+        document.body.classList.remove('lightMode');
+        document.body.classList.add('darkMode');
+      }
+      else {
+        document.body.classList.remove('darkMode');
+        document.body.classList.add('lightMode');
+      };
     };
   }
 );
