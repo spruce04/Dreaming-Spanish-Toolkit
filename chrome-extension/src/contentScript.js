@@ -1,6 +1,5 @@
 // When the window reloads
 window.addEventListener("load", () => {
-  console.log('reload content');
   send({
       reload: 'reload'
   });

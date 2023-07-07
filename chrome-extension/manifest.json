@@ -33,8 +33,5 @@
     "permissions": [
         "tabs",
         "storage"
-    ],
-    "host_permissions": [
-        "https://www.dreamingspanish.com/*"
     ]
 }
