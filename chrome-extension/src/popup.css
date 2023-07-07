@@ -6,11 +6,6 @@ body {
    align-items: center;
 }
 
-.darkMode {
-    background-color: black;
-    color: white;
-}
-
 #header {
     color: orange;
     font-size: 22px;
@@ -18,6 +13,7 @@ body {
 }
  
 #monthlyStats {
+    color: black;
     margin-top: 10px;
     display: flex;
     padding-top: 5px; 
@@ -47,6 +43,7 @@ body {
 }
 
 #clearMonthlyStats {
+    color: black;
     margin-top: 5px;
     padding-top: 2px; 
     padding-bottom: 2px; 
@@ -69,6 +66,7 @@ body {
 }
 
 #toggleDarkMode {
+    color: black;
     margin-top: 10px;
     display: flex;
     padding-top: 5px; 
