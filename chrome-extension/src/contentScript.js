@@ -1,3 +1,8 @@
+// Global DOM elements
+// We cache them once, and avoid them being queried multiple times
+const daysLogged = document.getElementsByClassName("ds-form-calendar__column-time");
+const allDays = document.getElementsByClassName("ds-form-calendar__column--day-number")
+
 // When the window reloads
 window.addEventListener("load", () => {
   send({
@@ -11,16 +16,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       send({
           monthlyStats: monthlyOverview()
       });
-  } else if ('display' in message) {
+  } else if ('display' in message || 'reload' in message) {
       if (message.display === "dark") {
-          document.body.classList.remove('lightMode');
-          document.body.classList.add('darkMode');
-      } else {
-          document.body.classList.remove('darkMode');
-          document.body.classList.add('lightMode');
-      }
-  } else if ('reload' in message) {
-      if (message.reload === "dark") {
           document.body.classList.remove('lightMode');
           document.body.classList.add('darkMode');
       } else {
@@ -37,15 +34,10 @@ function send(message) {
 
 //code to get monthly stats
 function monthlyOverview() {
-  //gather all the days
-  let daysLogged = document.getElementsByClassName("ds-form-calendar__column-time");
-  let allDays = document.getElementsByClassName("ds-form-calendar__column--day-number")
-
   //loop through all the days and sum the total amount of time
   let watched = 0;
   for (let i = 0; i < daysLogged.length; i++) {
-      let dailyTime = parseInt(daysLogged[i].textContent.slice(0, daysLogged[i].textContent.length - 1)); //cut out the 'm'
-      watched += dailyTime;
+      watched += parseInt(daysLogged[i].textContent.slice(0, daysLogged[i].textContent.length - 1)); //cut out the 'm'
   };
 
   //Turn the minutes only into hours and minutes to find the total time
