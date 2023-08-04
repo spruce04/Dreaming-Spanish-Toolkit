@@ -12,59 +12,6 @@ body {
     font-weight: 600;
 }
  
-#monthlyStats {
-    color: black;
-    margin-top: 10px;
-    display: flex;
-    padding-top: 5px; 
-    padding-bottom: 5px; 
-    background-color: white;
-    border: 1px solid orange;
-    border-radius: 5px;
-    font-size: 15px;
-}    
- 
-#monthlyStats:hover {
-    background-color: orange;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#monthlyStats:active {
-    background-color: darkorange;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#updatableMonthlyStats {
-    text-align: center;
-    margin-top: 10px;
-    padding: 2px;
-}
-
-#clearMonthlyStats {
-    color: black;
-    margin-top: 5px;
-    padding-top: 2px; 
-    padding-bottom: 2px; 
-    background-color: white;
-    border: 1px solid orange;
-    border-radius: 3px;
-    font-size: 10px;
-}    
- 
-#clearMonthlyStats:hover {
-    background-color: orange;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-#clearMonthlyStats:active {
-    background-color: darkorange;
-    font-size: 12px;
-    cursor: pointer;
-}
-
 #toggleDarkMode {
     color: black;
     margin-top: 10px;

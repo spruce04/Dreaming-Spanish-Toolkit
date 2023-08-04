@@ -7,8 +7,45 @@
     --subText: lightgray;
 }
 
+/* Formating for the monthly stats card**/
+.refreshStats {
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	border-radius: 10px;
+}
+
+.refreshStats:hover {
+	cursor: pointer;
+	padding: 7px;
+}
+
+
 
 /* CSS to change from light to dark mode **/
+body.darkMode .statText{
+	color: white;
+}
+
+body.darkMode .refreshStats {
+	background-color: var(--midBackground);
+	color: white;
+	border: 1px solid white;
+	
+}
+
+body.darkMode .refreshStats:hover {
+	background-color: var(--darkBackground);
+	font-size: 20px;
+}
+
+body.darkMode .refreshStats:active {
+	background-color: var(--mainText);
+	color: var(--darkBackground);
+}
+
+
 body.darkMode .ds-page__scroller {
 	background-color: var(--midBackground);
 	color: var(--mainText);
@@ -203,5 +240,33 @@ body.darkMode .ds-form-dropdown__label--sort {
 	color: var(--mainText);
 }
 
+body.darkMode .ds-form-dropdown__toggle--sort {
+	background-color: var(--lightBackground) !important;
+}
+
+body.darkMode .ds-form-dropdown__toggle-icon--left {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-form-dropdown__toggle-label--sort {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-form-dropdown__toggle-icon--right {
+	color: var(--mainText);
+}
+
 /*to go back to the default*/
-body.lightMode {}
+
+body.lightMode .refreshStats {
+	color: black !important;
+}
+
+body.lightMode .refreshStats:hover {
+	background-color: var(--subText);
+	font-size: 20px;
+}
+
+body.lightMode .statText{
+	color: black;
+}

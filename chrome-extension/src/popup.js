@@ -1,28 +1,8 @@
 //dom selectors and other setup (for the extension)
 const storage = chrome.storage.local;
-const monthlyParent = document.getElementById("updatableMonthlyStats");
-monthlyParent.style.display = "none"; //hide the monthly 'reset' button when the extension loads
-const gatherMonthlyStats = document.getElementById("monthlyStats");
 const toggleDisplay = document.getElementById("toggleDarkMode");
-const monthlyText = document.getElementById("monthlyStatsText");
-const monthlyClear = document.getElementById("clearMonthlyStats");
 
-
-//when the  monthly stats button is clicked, start the progress to gather monthly stats
-gatherMonthlyStats.addEventListener("click", () => {
-    monthlyParent.style.display = "block";
-    send({
-        content: 'get monthly stats'
-    }); //send a message to background.js
-});
-
-//when the clear button is clicked, clear the monthly stats
-monthlyClear.addEventListener("click", () => {
-    monthlyParent.style.display = "none";
-})
-
-
-// testing for dark mode (will be deleted later)
+// display if it is light or dark mode
 let testingToggle = document.getElementById("testingToggle");
 getDisplayMode().then((displayMode) => {
     testingToggle.textContent = displayMode;
@@ -69,12 +49,6 @@ async function send(message) {
 //listen for things from the other scripts
 chrome.runtime.onMessage.addListener(
     async function(message, sender, sendResponse) {
-        if ('monthlyStats' in message) { //if we get given monthly stats
-            if (message.monthlyStats.includes("Average time each day: NaN hour(s) and NaN minute(s).")) { //if button was clicked on a page other than results, do this
-                monthlyText.textContent = "Please ensure you are on the progress page in order to view monthly stats.";
-            } else { //if not, give the stats
-                monthlyText.textContent = message.monthlyStats;
-            };
-        };
+        //can be added to later
     }
 );

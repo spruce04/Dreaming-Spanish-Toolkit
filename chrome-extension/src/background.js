@@ -10,6 +10,12 @@ async function getDisplayMode() {
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
     if (changeInfo.status === "complete" && tab.url.startsWith("https://www.dreamingspanish.com/")) {
         const displayMode = await getDisplayMode();
+        if(tab.url.startsWith("https://www.dreamingspanish.com/progress")) {
+            send({
+                reload: displayMode,
+                progressPage: true
+            })
+        }
         send({
             reload: displayMode
         });
@@ -18,15 +24,7 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
 
 //listen for messages
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    if (message.content === "get monthly stats") {
-        send({
-            content: "get monthly stats"
-        });
-    } else if (message.monthlyStats) {
-        send({
-            monthlyStats: message.monthlyStats
-        });
-    } else if (message.content === "change display") {
+    if (message.content === "change display") {
         send({
             display: message.display
         });
