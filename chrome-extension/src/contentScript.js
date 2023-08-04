@@ -17,7 +17,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
           monthlyStats: monthlyOverview()
       });
   } else if ('display' in message || 'reload' in message) {
-      if (message.display === "dark") {
+      if (message.display === "dark" || message.reload === "dark") {
           document.body.classList.remove('lightMode');
           document.body.classList.add('darkMode');
       } else {

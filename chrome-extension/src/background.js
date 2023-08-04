@@ -1,10 +1,12 @@
 const storage = chrome.storage.local;
 
+//retrieve the display mode
 async function getDisplayMode() {
     const result = await storage.get(["displayMode"]);
     return result["displayMode"];
 }
 
+//when a tab is updated
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
     if (changeInfo.status === "complete" && tab.url.startsWith("https://www.dreamingspanish.com/")) {
         const displayMode = await getDisplayMode();
@@ -14,6 +16,7 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
     }
 });
 
+//listen for messages
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.content === "get monthly stats") {
         send({
@@ -30,6 +33,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     }
 });
 
+//send messages
 function send(message) {
     chrome.tabs.query({
         active: true,

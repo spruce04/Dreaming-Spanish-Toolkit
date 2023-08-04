@@ -1,4 +1,207 @@
-/* just the CSS to change from light to dark mode, nothing interesting **/
-body.darkMode .ds-page__scroller {background-color: #181818;color: white;}body.darkMode .ds-sidebar {background-color: #121212;color: white;}body.darkMode .ds-sidebar__brand-title {color: white;}body.darkMode .ds-sidebar__links-link {color: white !important;}body.darkMode .ds-form-dropdown__toggle--transparent {color: white !important;}body.darkMode .ds-card {background-color: #121212 !important;}body.darkMode .ds-form-dropdown__toggle--filter {background-color: #282828 !important;}body.darkMode .ds-form-dropdown__toggle-label--filter {color: lightgray;}body.darkMode .ds-form-dropdown__toggle-icon--filter {color: white;}body.darkMode .ds-video-card {background-color: #121212;}body.darkMode .ds-watch-page__video-description {color: lightgray;}body.darkMode .ds-watch-page__video-published-on {color: lightgray;}body.darkMode .ds-watch-page__video-published-on-icon {color: lightgray;}body.darkMode .ds-video-horizontal-card {background-color: #121212;}body.darkMode .ds-video-options__icon {color: white;}body.darkMode .dropdown-menu {background-color: #282828;color: lightgray;}body.darkMode .ds-card__header {background-color: #121212;}body.darkMode .ds-watch-page__playlist-counter {color: lightgray;}body.darkMode .dropdown-item {color: white;}body.darkMode .ds-video-horizontal-card__description {color: lightgray;}body.darkMode .ds-video-horizontal-card__published-on {color: lightgray;}body.darkMode .ds-video-horizontal-card__published-on-icon {color: lightgray;}body.darkMode .ds-my-list-series__no-results-menu-icon {color: white;}body.darkMode .ds-mini-card__body {background-color: #282828;}body.darkMode .ds-form-calendar__column-wrapper--highlighted {color: black;}body.darkMode .ds-mini-card__content-description {color: lightgray;}body.darkMode .ds-overall-progression-card__info-label--sm {color: lightgray;}body.darkMode .ds-simple-card--level-5 {color: navy;}body.darkMode .ds-table .dx-row td, body.darkMode .ds-table .dx-row tr {color: white;}body.darkMode .ds-table {background-color: #121212 !important;}body.darkMode .dx-row .dx-data-row .dx-row-lines .dx-column-lines {background-color: #121212 !important;}body.darkMode .dx-widget {color: white;}body.darkMode .ds-table * :not(.dx-datagrid-adaptive-more,.dx-datagrid-group-opened,.dx-datagrid-group-closed) {background-color: #121212 !important;}body.darkMode .modal-content {background-color: #121212;color: white;}body.darkMode .ds-modal__body .modal-body {background-color: #121212 !important;color: lightgray;}body.darkMode .ds-series-modal .ds-modal__body {background-color: #181818;}body.darkMode .ds-episode-card__content {background-color: #121212;}body.darkMode .ds-episode-card {background-color: #121212;}body.darkMode .ds-breadcrumbs__label {color: white;}body.darkMode .ds-form-dropdown__label--filter {color: white;}body.darkMode .ds-browse-filter-applied__videos-found {color: white;}body.darkMode .ds-form-dropdown__highlight {color: white;}body.darkMode .ds-text-black {color: white !important;}
+/* variables **/
+:root {
+    --darkBackground: #121212;
+    --midBackground: #181818;
+    --lightBackground: #282828;
+    --mainText: white;
+    --subText: lightgray;
+}
+
+
+/* CSS to change from light to dark mode **/
+body.darkMode .ds-page__scroller {
+	background-color: var(--midBackground);
+	color: var(--mainText);
+}
+
+body.darkMode .ds-sidebar {
+	background-color: var(--darkBackground);
+	color: var(--mainText);
+}
+
+body.darkMode .ds-sidebar__brand-title {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-sidebar__links-link {
+	color: var(--mainText) !important;
+}
+
+body.darkMode .ds-form-dropdown__toggle--transparent {
+	color: var(--mainText) !important;
+}
+
+body.darkMode .ds-card {
+	background-color: var(--darkBackground) !important;
+}
+
+body.darkMode .ds-form-dropdown__toggle--filter {
+	background-color: var(--lightBackground) !important;
+}
+
+body.darkMode .ds-form-dropdown__toggle-label--filter {
+	color: var(--subText);
+}
+
+body.darkMode .ds-form-dropdown__toggle-icon--filter {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-video-card {
+	background-color: var(--darkBackground);
+}
+
+body.darkMode .ds-watch-page__video-description {
+	color: var(--subText);
+}
+
+body.darkMode .ds-watch-page__video-published-on {
+	color: var(--subText);
+}
+
+body.darkMode .ds-watch-page__video-published-on-icon {
+	color: var(--subText);
+}
+
+body.darkMode .ds-video-horizontal-card {
+	background-color: var(--darkBackground);
+}
+
+body.darkMode .ds-video-options__icon {
+	color: var(--mainText);
+}
+
+body.darkMode .dropdown-menu {
+	background-color: var(--lightBackground);
+	color: var(--subText);
+}
+
+body.darkMode .ds-card__header {
+	background-color: var(--darkBackground);
+}
+
+body.darkMode .ds-watch-page__playlist-counter {
+	color: var(--subText);
+}
+
+body.darkMode .dropdown-item {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-video-horizontal-card__description {
+	color: var(--subText);
+}
+
+body.darkMode .ds-video-horizontal-card__published-on {
+	color: var(--subText);
+}
+
+body.darkMode .ds-video-horizontal-card__published-on-icon {
+	color: var(--subText);
+}
+
+body.darkMode .ds-my-list-series__no-results-menu-icon {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-mini-card__body {
+	background-color: var(--lightBackground);
+}
+
+body.darkMode .ds-form-calendar__column-wrapper--highlighted {
+	color: black;
+}
+
+body.darkMode .ds-mini-card__content-description {
+	color: var(--subText);
+}
+
+body.darkMode .ds-overall-progression-card__info-label--sm {
+	color: var(--subText);
+}
+
+body.darkMode .ds-simple-card--level-5 {
+	color: navy;
+}
+
+body.darkMode .ds-table .dx-row td,
+body.darkMode .ds-table .dx-row tr {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-table {
+	background-color: var(--darkBackground) !important;
+}
+
+body.darkMode .dx-row .dx-data-row .dx-row-lines .dx-column-lines {
+	background-color: var(--darkBackground) !important;
+}
+
+body.darkMode .dx-widget {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-table * :not(.dx-datagrid-adaptive-more, .dx-datagrid-group-opened, .dx-datagrid-group-closed) {
+	background-color: var(--darkBackground) !important;
+}
+
+body.darkMode .modal-content {
+	background-color: var(--darkBackground);
+	color: var(--mainText);
+}
+
+body.darkMode .ds-modal__body .modal-body {
+	background-color: var(--darkBackground) !important;
+	color: var(--subText);
+}
+
+body.darkMode .ds-series-modal .ds-modal__body {
+	background-color: var(--midBackground);
+}
+
+body.darkMode .ds-episode-card__content {
+	background-color: var(--darkBackground);
+}
+
+body.darkMode .ds-episode-card {
+	background-color: var(--darkBackground);
+}
+
+body.darkMode .ds-breadcrumbs__label {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-form-dropdown__label--filter {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-browse-filter-applied__videos-found {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-form-dropdown__highlight {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-text-black {
+	color: var(--mainText) !important;
+}
+
+body.darkMode .ds-browse-applied__videos-found {
+	color: var(--subText);
+}
+
+body.darkMode .ds-browse-hidden-videos__label {
+	color: var(--subText);
+}
+
+body.darkMode .ds-watch-page__series-related-title {
+	color: var(--subText);
+}
+
+body.darkMode .ds-form-dropdown__label--sort {
+	color: var(--mainText);
+}
+
 /*to go back to the default*/
 body.lightMode {}
