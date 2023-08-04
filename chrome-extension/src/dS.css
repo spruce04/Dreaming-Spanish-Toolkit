@@ -256,6 +256,10 @@ body.darkMode .ds-form-dropdown__toggle-icon--right {
 	color: var(--mainText);
 }
 
+body.darkMode .ds-episode-card__description {
+	color:var(--subText);
+}
+
 /*to go back to the default*/
 
 body.lightMode .refreshStats {
