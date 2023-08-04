@@ -22,7 +22,7 @@ function progressCardCreate() {
 
   let progressCardIcon = progressCardTitle.appendChild(document.createElement("img"));
   progressCardIcon.className = "ds-mini-card__header-icon";
-  progressCardIcon.src = 'https://github.com/spruce04/Dreaming-Spanish-Toolkit/blob/main/chrome-extension/images/statsIcon.png';
+  progressCardIcon.src = 'https://raw.githubusercontent.com/spruce04/Dreaming-Spanish-Toolkit/main/chrome-extension/images/statsIcon.png';
 
   let progressHeaderText = progressCardTitle.appendChild(document.createElement("span"));
   progressHeaderText.textContent = "Monthly Stats";
