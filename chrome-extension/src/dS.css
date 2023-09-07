@@ -257,7 +257,11 @@ body.darkMode .ds-form-dropdown__toggle-icon--right {
 }
 
 body.darkMode .ds-episode-card__description {
-	color:var(--subText);
+	color: var(--subText);
+}
+
+body.darkMode .ds-video-feedback-card__content  {
+	background-color: var(--midBackground);
 }
 
 /*to go back to the default*/
