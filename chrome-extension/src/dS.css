@@ -21,248 +21,9 @@
 	padding: 7px;
 }
 
-
-
 /* CSS to change from light to dark mode **/
-body.darkMode .statText{
-	color: white;
-}
-
-body.darkMode .refreshStats {
-	background-color: var(--midBackground);
-	color: white;
-	border: 1px solid white;
-	
-}
-
-body.darkMode .refreshStats:hover {
-	background-color: var(--darkBackground);
-	font-size: 20px;
-}
-
-body.darkMode .refreshStats:active {
-	background-color: var(--mainText);
-	color: var(--darkBackground);
-}
 
 
-body.darkMode .ds-page__scroller {
-	background-color: var(--midBackground);
-	color: var(--mainText);
-}
-
-body.darkMode .ds-sidebar {
-	background-color: var(--darkBackground);
-	color: var(--mainText);
-}
-
-body.darkMode .ds-sidebar__brand-title {
-	color: var(--mainText);
-}
-
-body.darkMode .ds-sidebar__links-link {
-	color: var(--mainText) !important;
-}
-
-body.darkMode .ds-form-dropdown__toggle--transparent {
-	color: var(--mainText) !important;
-}
-
-body.darkMode .ds-card {
-	background-color: var(--darkBackground) !important;
-}
-
-body.darkMode .ds-form-dropdown__toggle--filter {
-	background-color: var(--lightBackground) !important;
-}
-
-body.darkMode .ds-form-dropdown__toggle-label--filter {
-	color: var(--subText);
-}
-
-body.darkMode .ds-form-dropdown__toggle-icon--filter {
-	color: var(--mainText);
-}
-
-body.darkMode .ds-video-card {
-	background-color: var(--darkBackground);
-}
-
-body.darkMode .ds-watch-page__video-description {
-	color: var(--subText);
-}
-
-body.darkMode .ds-watch-page__video-published-on {
-	color: var(--subText);
-}
-
-body.darkMode .ds-watch-page__video-published-on-icon {
-	color: var(--subText);
-}
-
-body.darkMode .ds-video-horizontal-card {
-	background-color: var(--darkBackground);
-}
-
-body.darkMode .ds-video-options__icon {
-	color: var(--mainText);
-}
-
-body.darkMode .dropdown-menu {
-	background-color: var(--lightBackground);
-	color: var(--subText);
-}
-
-body.darkMode .ds-card__header {
-	background-color: var(--darkBackground);
-}
-
-body.darkMode .ds-watch-page__playlist-counter {
-	color: var(--subText);
-}
-
-body.darkMode .dropdown-item {
-	color: var(--mainText);
-}
-
-body.darkMode .ds-video-horizontal-card__description {
-	color: var(--subText);
-}
-
-body.darkMode .ds-video-horizontal-card__published-on {
-	color: var(--subText);
-}
-
-body.darkMode .ds-video-horizontal-card__published-on-icon {
-	color: var(--subText);
-}
-
-body.darkMode .ds-my-list-series__no-results-menu-icon {
-	color: var(--mainText);
-}
-
-body.darkMode .ds-mini-card__body {
-	background-color: var(--lightBackground);
-}
-
-body.darkMode .ds-form-calendar__column-wrapper--highlighted {
-	color: black;
-}
-
-body.darkMode .ds-mini-card__content-description {
-	color: var(--subText);
-}
-
-body.darkMode .ds-overall-progression-card__info-label--sm {
-	color: var(--subText);
-}
-
-body.darkMode .ds-simple-card--level-5 {
-	color: navy;
-}
-
-body.darkMode .ds-table .dx-row td,
-body.darkMode .ds-table .dx-row tr {
-	color: var(--mainText);
-}
-
-body.darkMode .ds-table {
-	background-color: var(--darkBackground) !important;
-}
-
-body.darkMode .dx-row .dx-data-row .dx-row-lines .dx-column-lines {
-	background-color: var(--darkBackground) !important;
-}
-
-body.darkMode .dx-widget {
-	color: var(--mainText);
-}
-
-body.darkMode .ds-table * :not(.dx-datagrid-adaptive-more, .dx-datagrid-group-opened, .dx-datagrid-group-closed) {
-	background-color: var(--darkBackground) !important;
-}
-
-body.darkMode .modal-content {
-	background-color: var(--darkBackground);
-	color: var(--mainText);
-}
-
-body.darkMode .ds-modal__body .modal-body {
-	background-color: var(--darkBackground) !important;
-	color: var(--subText);
-}
-
-body.darkMode .ds-series-modal .ds-modal__body {
-	background-color: var(--midBackground);
-}
-
-body.darkMode .ds-episode-card__content {
-	background-color: var(--darkBackground);
-}
-
-body.darkMode .ds-episode-card {
-	background-color: var(--darkBackground);
-}
-
-body.darkMode .ds-breadcrumbs__label {
-	color: var(--mainText);
-}
-
-body.darkMode .ds-form-dropdown__label--filter {
-	color: var(--mainText);
-}
-
-body.darkMode .ds-browse-filter-applied__videos-found {
-	color: var(--mainText);
-}
-
-body.darkMode .ds-form-dropdown__highlight {
-	color: var(--mainText);
-}
-
-body.darkMode .ds-text-black {
-	color: var(--mainText) !important;
-}
-
-body.darkMode .ds-browse-applied__videos-found {
-	color: var(--subText);
-}
-
-body.darkMode .ds-browse-hidden-videos__label {
-	color: var(--subText);
-}
-
-body.darkMode .ds-watch-page__series-related-title {
-	color: var(--subText);
-}
-
-body.darkMode .ds-form-dropdown__label--sort {
-	color: var(--mainText);
-}
-
-body.darkMode .ds-form-dropdown__toggle--sort {
-	background-color: var(--lightBackground) !important;
-}
-
-body.darkMode .ds-form-dropdown__toggle-icon--left {
-	color: var(--mainText);
-}
-
-body.darkMode .ds-form-dropdown__toggle-label--sort {
-	color: var(--mainText);
-}
-
-body.darkMode .ds-form-dropdown__toggle-icon--right {
-	color: var(--mainText);
-}
-
-body.darkMode .ds-episode-card__description {
-	color: var(--subText);
-}
-
-body.darkMode .ds-video-feedback-card__content  {
-	background-color: var(--midBackground);
-}
 
 /*to go back to the default*/
 
@@ -277,4 +38,67 @@ body.lightMode .refreshStats:hover {
 
 body.lightMode .statText{
 	color: black;
+}
+
+
+/* changes to darkmode with new html */
+
+/* video display page */
+
+body.darkMode .ds-video-card {
+	background-color: var(--darkBackground) !important;
+}
+
+body.darkMode .ds-video-card__title {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-form-switch__label {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-page {
+	background-color: var(--midBackground);
+}
+
+body.darkMode .content-area {
+	background-color: var(--midBackground);
+}
+
+body.darkMode .sidebar-area {
+	background-color: var(--darkBackground) !important;
+}
+
+/* general */
+
+body.darkMode p {
+	color: var(--mainText);
+}
+
+/* menus */
+body.darkMode .dropdown-menu {
+	background-color: var(--lightBackground);
+	color: var(--mainText);
+}
+
+/* sidebar */
+
+body.darkMode .ds-sidebar__brand {
+	background-color: var(--darkBackground);
+}
+
+body.darkMode .ds-sidebar__scroller {
+	background-color: var(--darkBackground);
+}
+
+body.darkMode .ds-sidebar__session {
+	background-color: var(--darkBackground);
+}
+
+body.darkMode .ds-card__title {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-form-dropdown__toggle--transparent {
+	color: var(--mainText) !important;
 }
