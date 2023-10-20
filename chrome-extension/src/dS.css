@@ -4,7 +4,7 @@
     --midBackground: #181818;
     --lightBackground: #282828;
     --mainText: white;
-    --subText: lightgray;
+    --subText: #adb9c7;
 }
 
 /* Formating for the monthly stats card**/
@@ -47,9 +47,10 @@ body.lightMode .statText{
 
 body.darkMode .ds-video-card {
 	background-color: var(--darkBackground) !important;
+	color: var(--mainText);
 }
 
-body.darkMode .ds-video-card__title {
+body.darkMode .ds-video-options__icon {
 	color: var(--mainText);
 }
 
@@ -67,6 +68,24 @@ body.darkMode .content-area {
 
 body.darkMode .sidebar-area {
 	background-color: var(--darkBackground) !important;
+}
+
+/* sorting bar at top of video page */
+
+body.darkMode .ds-card__content {
+	background-color: var(--darkBackground);
+}
+
+body.darkMode .ds-card__content .btn {
+	background-color: var(--lightBackground) !important;
+}
+
+body.darkMode .ds-card__content .btn svg {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-text-black {
+	color: var(--subText) !important;
 }
 
 /* general */
@@ -101,4 +120,19 @@ body.darkMode .ds-card__title {
 
 body.darkMode .ds-form-dropdown__toggle--transparent {
 	color: var(--mainText) !important;
+}
+
+/* when watching a video */
+body.darkMode .ds-watch-page__video-title {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-watch-page__video-description {
+	color: var(--subText);
+}
+
+/* sidebar when watching a video - start from here */ 
+body.darkMode .card {
+	background-color: var(--darkBackground);
+	color: var(--mainText);
 }
