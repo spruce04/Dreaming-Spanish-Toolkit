@@ -112,7 +112,7 @@ body.darkMode .ds-watch-page__video-title {
 }
 
 body.darkMode .ds-watch-page__video-description {
-	color: var(--mainText);
+	color: var(--subText) !important;
 }
 
 body.darkMode .ds-watch-page__video-published-on-icon {
@@ -253,6 +253,11 @@ body.darkMode .nav-item {
 /* settings page */
 body.darkMode .ds-card__body {
 	color: var(--mainText);
+}
+
+/* daily goal popup (hopefully works) */
+body.darkMode .ds-toast {
+	background-color: var(--lightBackground);
 }
 
 /*to go back to the default light mode*/
