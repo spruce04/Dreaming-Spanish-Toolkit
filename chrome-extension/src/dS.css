@@ -1,6 +1,7 @@
 /* variables **/
 :root {
-    --darkBackground: #121212;
+    --black: black;
+	--darkBackground: #121212;
     --midBackground: #181818;
     --lightBackground: #282828;
     --mainText: white;
@@ -190,6 +191,9 @@ body.darkMode .ds-form-calendar__column-wrapper:not(.ds-form-calendar__column-wr
 	color: var(--subText);
 }
 
+body.darkMode .ds-form-calendar__column-wrapper--highlighted {
+	color: var(--black);
+}
 
 body.darkMode .ds-mini-card {
 	background-color: var(--midBackground);
@@ -263,7 +267,7 @@ body.darkMode .ds-toast {
 /*to go back to the default light mode*/
 
 body.lightMode .refreshStats {
-	color: black !important;
+	color: var(--black) !important;
 	background-color: var(--mainText);
 	border: 1px solid var(--subText);
 }
@@ -275,5 +279,5 @@ body.lightMode .refreshStats:hover {
 }
 
 body.lightMode .statText{
-	color: black;
+	color: var(--black);
 }
