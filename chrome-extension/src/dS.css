@@ -264,6 +264,59 @@ body.darkMode .ds-toast {
 	background-color: var(--lightBackground);
 }
 
+/* new changes dec 2024 */
+body.darkMode .ds-scrollable-area {
+	background-color: var(--darkBackground) !important;
+}
+
+body.darkMode .ds-video-options__toggle-icon {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-video-options__dropdown {
+	background-color: var(--midBackground) !important;
+}
+
+body.darkMode .user-name {
+	color: var(--mainText) !important;
+}
+
+body.darkMode .ds-browse-filter-search__search-icon {
+	color: var(--mainText);
+}
+
+body.darkMode .ds-catalog-video-card {
+	background-color: var(--darkBackground) !important;
+}
+
+body.darkMode .ds-premium-page__card-header {
+	background-color: var(--darkBackground);
+}
+
+body.darkMode .ds-premium-page__card-footer {
+	background-color: var(--lightBackground);
+	color: var(--mainText);
+}
+
+/* svgs */
+body.darkMode svg.ds-carousel__icon {
+	color: var(--mainText);
+}
+
+/* comments (can't change text and username colour, not sure why) */
+body.darkMode .comment-user-name {
+	color: var(--mainText) !important;
+}
+
+body.darkMode .comment-content .comment-content-inner {
+	color: var(--mainText) !important;
+}
+
+body.darkMode .ds-video-section__card-comments-header-toggle-icon {
+	color: var(--mainText);
+}
+
+
 /*to go back to the default light mode*/
 
 body.lightMode .refreshStats {

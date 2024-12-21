@@ -11,5 +11,6 @@
 * If the extension doesn't work when it first loads, try refreshing the page and reopening the extension (not sure why this happens)
 
 ## Possible Future Ideas
+* Fix the dark mode display for comments - unsure why this isn't working
 * Hide videos functionality
 * Any suggestions or bug reports welcome - sam.dev00004@gmail.com
