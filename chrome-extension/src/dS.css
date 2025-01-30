@@ -85,7 +85,22 @@ body.darkMode .dropdown-menu {
 	color: var(--mainText);
 }
 
+/* profile dropdown */
+body.darkMode .ds-menu__dropdown{
+	background-color: var(--darkBackground);
+}
+
+
 /* sidebar */
+
+body.darkMode .ds-sidebar{
+	background-color: var(--darkBackground);
+}
+
+body.darkMode .ds-top-navbar{
+	background-color: var(--darkBackground);
+	border: none;
+}
 
 body.darkMode .ds-sidebar__brand {
 	background-color: var(--darkBackground);
@@ -303,19 +318,12 @@ body.darkMode svg.ds-carousel__icon {
 	color: var(--mainText);
 }
 
-/* comments (can't change text and username colour, not sure why) */
-body.darkMode .comment-user-name {
-	color: var(--mainText) !important;
-}
+/* comments is handled inside commentStyles because its an injected shadow root*/
 
-body.darkMode .comment-content .comment-content-inner {
-	color: var(--mainText) !important;
-}
 
 body.darkMode .ds-video-section__card-comments-header-toggle-icon {
 	color: var(--mainText);
 }
-
 
 /*to go back to the default light mode*/
 

@@ -16,8 +16,13 @@
     "content_scripts": [
         {
             "matches": ["https://www.dreamingspanish.com/*"],
-            "js": ["./src/contentScript.js"],
-            "css": ["./src/dS.css"]
+            "js": [
+                "./src/contentScript.js", 
+                "./src/commentStyles.js"
+            ],
+            "css": ["./src/dS.css"],
+            "run_at": "document_start",
+            "all_frames": true
         }
     ],
     "action": {
