@@ -57,18 +57,8 @@ function progressCardCreate() {
 
 // Listen for messages from other parts of the extension
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  console.log(message);
-  if ('display' in message || 'reload' in message) {
-      if(message['progressPage'] === true) {
-        progressCardCreate()
-      }
-      if (message.display === "dark" || message.reload === "dark") {
-          document.body.classList.remove('lightMode');
-          document.body.classList.add('darkMode');
-      } else {
-          document.body.classList.remove('darkMode');
-          document.body.classList.add('lightMode');
-      }
+  if(message['progressPage'] === true) {
+    progressCardCreate()
   }
 });
 

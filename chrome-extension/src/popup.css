@@ -11,30 +11,6 @@ body {
     font-size: 22px;
     font-weight: 600;
 }
- 
-#toggleDarkMode {
-    color: black;
-    margin-top: 10px;
-    display: flex;
-    padding-top: 5px; 
-    padding-bottom: 5px; 
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 15px;
-}
-
-#toggleDarkMode:hover {
-    background-color: gray;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#toggleDarkMode:active {
-    background-color: darkgray;
-    font-size: 16px;
-    cursor: pointer;
-}
 
 #footer {
     display: flex;
