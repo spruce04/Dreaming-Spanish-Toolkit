@@ -1,20 +1,8 @@
-/* variables **/
-:root {
-    --black: black;
-	--darkBackground: #121212;
-    --midBackground: #181818;
-    --lightBackground: #282828;
-    --mainText: white;
-    --subText: #adb9c7;
-}
+/*Styles for the injected monthly stats card*/
 
-/* Formating for the monthly stats card**/
 .refreshStats {
-	padding-left: 12px;
-	padding-right: 12px;
-	padding-top: 6px;
-	padding-bottom: 6px;
-	border-radius: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
 }
 
 .refreshStats:hover {
@@ -333,12 +321,10 @@ body.lightMode .refreshStats {
 	border: 1px solid var(--subText);
 }
 
-body.lightMode .refreshStats:hover {
-	background-color: var(--subText);
-	font-size: 20px;
-	border: 1px solid var(--mainText);
+.refreshStats:active {
+    border: 2px solid gray;
 }
 
-body.lightMode .statText{
-	color: var(--black);
+.statText{
+    font-weight: 550;
 }
