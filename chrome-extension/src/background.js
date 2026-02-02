@@ -8,9 +8,11 @@ async function getDisplayMode() {
 
 //when a tab is updated
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
-    if (changeInfo.status === "complete" && tab.url.startsWith("https://www.dreamingspanish.com/")) {
+    if (changeInfo.status === "complete" && tab.url.startsWith("https://app.dreaming.com/")) {
         const displayMode = await getDisplayMode();
-        if(tab.url.startsWith("https://www.dreamingspanish.com/progress")) {
+        if (
+            tab.url.startsWith("https://app.dreaming.com/spanish/progress") ||
+            tab.url.startsWith("https://app.dreaming.com/french/progress")) {
             send({
                 reload: displayMode,
                 progressPage: true

@@ -6,6 +6,11 @@ const allDays = document.getElementsByClassName("ds-form-calendar__column--day-n
 //Update the DS results page with a progress card
 //background setup
 function progressCardCreate() {
+  //if the progress card already exists, don't create it a second time
+  if (document.getElementById("toolkitCard")) {
+    return;
+  }
+
   const activityCardArray = document.getElementsByClassName("ds-your-activity-card__block");
   const activityCard = activityCardArray[0]; //this is the one we want to modify
   let progressCard = activityCard.appendChild(document.createElement("div"));
@@ -52,16 +57,34 @@ function progressCardCreate() {
     const stats = monthlyOverview();
     progressCardTextTotal.textContent = stats.total;
     progresscardTextAverage.textContent = stats.average;
+    updateTextColour();
   }) 
 }
+
+//Change the colour of the text in the stats description if the Toolkit is in light, but the website is in dark
+function updateTextColour() {
+  const site = document.getElementById("root");
+  const siteScheme = window.getComputedStyle(site).getPropertyValue("color-scheme");
+  const allStatsText = document.getElementsByClassName("statText");
+  if(document.body.classList.contains("lightMode") && siteScheme.trim() === "dark") {
+      for (let i = 0; i < allStatsText.length; i++) {
+        allStatsText[i].style.color = "white";
+    }
+  }
+  else {
+    for (let i = 0; i < allStatsText.length; i++) {
+      allStatsText[i].style.color = "";
+  }
+  }
+}  
 
 // Listen for messages from other parts of the extension
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   console.log(message);
+  if (message.progressPage === true) {
+    progressCardCreate();
+  }
   if ('display' in message || 'reload' in message) {
-      if(message['progressPage'] === true) {
-        progressCardCreate()
-      }
       if (message.display === "dark" || message.reload === "dark") {
           document.body.classList.remove('lightMode');
           document.body.classList.add('darkMode');
@@ -70,6 +93,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
           document.body.classList.add('lightMode');
       }
   }
+  updateTextColour();
 });
 
 // Send messages from the content script

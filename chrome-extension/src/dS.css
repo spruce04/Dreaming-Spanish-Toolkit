@@ -318,9 +318,47 @@ body.darkMode svg.ds-carousel__icon {
 	color: var(--mainText);
 }
 
+/* New changes Feb 2026*/
+
+body.darkMode svg.ds-video-options__toggle-icon path {
+    fill: var(--black) !important;
+    stroke: var(--black) !important;
+}
+
+body.darkMode svg.ds-notification-tray__icon path {
+	fill: var(--mainText) !important;
+    stroke: var(--mainText) !important;
+}
+
+body.darkMode svg.ds-top-navbar__profile-icon path {
+	fill: var(--mainText) !important;
+    stroke: var(--mainText) !important;
+}
+
+body.darkMode svg.ds-video-options__toggle-icon path {
+	fill: var(--mainText) !important;
+    stroke: var(--mainText) !important;
+}
+
+body.darkMode svg.ds-my-list-series-page__no-results-menu-icon path {
+	fill: var(--subText) !important;
+    stroke: var(--subText) !important;
+}
+
+body.darkMode button.ds-notifications-menu__tab {
+	color: var(--mainText) !important;
+}
+
+body.darkMode button.ds-notifications-menu__mark-all-read {
+	color: var(--mainText) !important;
+}
+
+body.darkMode .ds-table svg {
+    fill: var(--mainText) !important;
+    stroke: var(--mainText) !important;
+}
+
 /* comments is handled inside commentStyles because its an injected shadow root*/
-
-
 body.darkMode .ds-video-section__card-comments-header-toggle-icon {
 	color: var(--mainText);
 }
