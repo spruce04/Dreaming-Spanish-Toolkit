@@ -1,15 +1,24 @@
-# Dreaming-Spanish-Toolkit
+# Dreaming Spanish Toolkit
 
-## About The Project
-* I taught myself some JS with the Odin Project but stopped using it for a while, so I'm making this to try and code a little bit again
-* A chrome extension to enable new functionalities on the Dreaming Spanish website
+A Chrome extension that adds quality-of-life features to the [Dreaming Spanish](https://app.dreaming.com) website.
 
-## Chrome Extension
-* [Chrome Extension](https://github.com/spruce04/Dreaming-Spanish-Toolkit/tree/main/chrome-extension) &rarr; A chrome extension that has the functionalities of all the currently completed features for easy use
-  * Monthly stats calculator
-  * Toggle dark mode
-* If the extension doesn't work when it first loads, try refreshing the page and reopening the extension (not sure why this happens)
+## Features
+
+### 📊 Monthly Stats
+Adds a stats card to the progress page showing:
+- **Total time watched** for the current month
+- **Daily average**, adjusted for the current date if you're viewing the current month
+
+### 🌙 Dark Mode
+- No longer implemented on a site-wide scale, as the Dreaming Spanish website has now implemented a native dark mode. 
+- However, some CSS is still implemented on the stats card so that it accurately reflects the display mode of the website
+
+## Installation
+The extension can be installed from the [Chrome Web Store](https://chromewebstore.google.com/detail/dreaming-spanish-toolkit/lponnilepefmohnagjabckdeiobldmhk/overview).
 
 ## Possible Future Ideas
-* Hide videos functionality
-* Anything else you'd like to implement
+- Hide videos functionality
+- Anything else you'd like, pull requests welcome!
+
+## License
+[MIT](LICENSE)

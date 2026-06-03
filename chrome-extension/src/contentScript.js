@@ -3,6 +3,21 @@
 const daysLogged = document.getElementsByClassName("ds-form-calendar__column-time");
 const allDays = document.getElementsByClassName("ds-form-calendar__column--day-number");
 
+//Update the styling of the stats card to match the styling of the website
+//The style updates when the website first loads, and whenever the "reload" button is clicked
+function updateStyle() {
+  const site = document.getElementById("root");
+  const siteScheme = window.getComputedStyle(site).getPropertyValue("color-scheme");
+  if(siteScheme.trim() === "dark") {
+    document.body.classList.remove('lightMode');
+    document.body.classList.add('darkMode');
+  }
+  else {
+    document.body.classList.add('lightMode');
+    document.body.classList.remove('darkMode');
+  }
+}  
+
 //Update the DS results page with a progress card
 //background setup
 function progressCardCreate() {
@@ -52,31 +67,16 @@ function progressCardCreate() {
   progressCardTextTotal.textContent = stats.total;
   progresscardTextAverage.textContent = stats.average;
 
-  //refresh button
+  updateStyle();
+
+  //when refresh button is clicked
   progressCardUpdate.addEventListener("click", () => {
     const stats = monthlyOverview();
     progressCardTextTotal.textContent = stats.total;
     progresscardTextAverage.textContent = stats.average;
-    updateTextColour();
+    updateStyle();
   }) 
 }
-
-//Change the colour of the text in the stats description if the Toolkit is in light, but the website is in dark
-function updateTextColour() {
-  const site = document.getElementById("root");
-  const siteScheme = window.getComputedStyle(site).getPropertyValue("color-scheme");
-  const allStatsText = document.getElementsByClassName("statText");
-  if(document.body.classList.contains("lightMode") && siteScheme.trim() === "dark") {
-      for (let i = 0; i < allStatsText.length; i++) {
-        allStatsText[i].style.color = "white";
-    }
-  }
-  else {
-    for (let i = 0; i < allStatsText.length; i++) {
-      allStatsText[i].style.color = "";
-  }
-  }
-}  
 
 // Listen for messages from other parts of the extension
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -84,16 +84,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.progressPage === true) {
     progressCardCreate();
   }
-  if ('display' in message || 'reload' in message) {
-      if (message.display === "dark" || message.reload === "dark") {
-          document.body.classList.remove('lightMode');
-          document.body.classList.add('darkMode');
-      } else {
-          document.body.classList.remove('darkMode');
-          document.body.classList.add('lightMode');
-      }
-  }
-  updateTextColour();
 });
 
 // Send messages from the content script

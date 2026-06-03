@@ -1,7 +1,7 @@
 {
     "name": "TEST Dreaming Spanish Toolkit",
     "description": "A chrome extension to interact with the Dreaming Languages website, enabling new functionalities.",
-    "version": "0.1.8",
+    "version": "0.2.0",
     "manifest_version": 3,
     "icons": {
         "16": "/images/icon-16x16.png",
@@ -17,10 +17,9 @@
         {
             "matches": ["https://app.dreaming.com/*"],
             "js": [
-                "./src/contentScript.js", 
-                "./src/commentStyles.js"
+                "./src/contentScript.js"
             ],
-            "css": ["./src/dS.css"],
+            "css": ["./src/inject.css"],
             "run_at": "document_start",
             "all_frames": true
         }
@@ -36,7 +35,6 @@
     },
     "options_page": "./src/options.html",
     "permissions": [
-        "tabs",
-        "storage"
+        "tabs"
     ]
 }

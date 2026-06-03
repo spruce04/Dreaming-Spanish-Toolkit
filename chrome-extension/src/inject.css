@@ -1,0 +1,54 @@
+/* variables - no longer used but kept just in case **/
+:root {
+    --black: black;
+	--darkBackground: #121212;
+    --midBackground: #181818;
+    --lightBackground: #282828;
+    --mainText: white;
+    --subText: #adb9c7;
+}
+
+/* Formating for the monthly stats card**/
+.refreshStats {
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	border-radius: 10px;
+}
+
+/* If the website is in light mode**/
+body.lightMode .refreshStats:hover {
+	cursor: pointer;
+	background-color: darkgray;
+}
+
+body.lightMode .refreshStats:active {
+	background-color: white;
+	padding-left: 14px;
+	padding-right: 14px;
+}
+
+body.lightMode .statText {
+	color: var(--lightBackground);
+}
+
+/* If the website is in dark mode**/
+body.darkMode .refreshStats {
+	background-color: var(--lightBackground);
+}
+
+body.darkMode .refreshStats:hover {
+	cursor: pointer;
+	background-color: lightgray;
+}
+
+body.darkMode .refreshStats:active {
+	background-color: black;
+	padding-left: 14px;
+	padding-right: 14px;
+}
+
+body.darkMode .statText {
+	color: var(--mainTextw);
+}
