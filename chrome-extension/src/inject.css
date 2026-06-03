@@ -1,4 +1,4 @@
-/* variables - no longer used but kept just in case **/
+/* variables **/
 :root {
     --black: black;
 	--darkBackground: #121212;
@@ -50,5 +50,5 @@ body.darkMode .refreshStats:active {
 }
 
 body.darkMode .statText {
-	color: var(--mainTextw);
+	color: var(--mainText);
 }
